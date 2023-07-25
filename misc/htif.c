@@ -20,12 +20,13 @@ long htif_syscall(uint64_t a0, uint64_t a1, uint64_t a2, unsigned long n)
     buf[3] = a2;
 
     sc = HTIF_TOHOST(0, 0, (uintptr_t)&buf);
-    spin_lock(&htif_lock);
+    //spin_lock(&htif_lock);
     wmb();
     tohost = sc;
+     __asm__ __volatile__("ebreak");
     while (fromhost == 0);
     fromhost = 0;
-    spin_unlock(&htif_lock);
+    //spin_unlock(&htif_lock);
 
     rmb();
     return buf[0];

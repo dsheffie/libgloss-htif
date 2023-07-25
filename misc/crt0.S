@@ -42,7 +42,7 @@ _start:
     li t0, (MSTATUS_FS | MSTATUS_XS)
     csrs mstatus, t0
 
-#ifdef __riscv_flen
+#if 0
     /* Initialize FPU if present */
     la t0, 1f
     csrw mtvec, t0
