@@ -3,6 +3,5 @@
 
 int _open(const char *name, int flags, int mode)
 {
-    errno = ENOENT;
-    return -1;
+  return (int)SYSCALL3(SYS_open, (uintptr_t)name, flags, mode);
 }

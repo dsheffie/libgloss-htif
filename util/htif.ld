@@ -114,7 +114,7 @@ SECTIONS
     PROVIDE (_end = .);
 
     /* Reserve heap space */
-    PROVIDE(__heap_size = 128K);
+    PROVIDE(__heap_size = 1024M);
     . += __heap_size;
     . = ALIGN (4K);
     PROVIDE (__heap_end = .);

@@ -4,6 +4,5 @@
 
 ssize_t _read(int file, void *ptr, size_t len)
 {
-    errno = ENOSYS;
-    return -1;
+  return SYSCALL3(SYS_read, file, (uintptr_t)ptr, len);
 }

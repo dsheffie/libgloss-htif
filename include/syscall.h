@@ -11,6 +11,7 @@
 #define SYS_ftruncate 46
 #define SYS_faccessat 48
 #define SYS_chdir 49
+#define SYS_open   55
 #define SYS_openat 56
 #define SYS_close 57
 #define SYS_lseek 62
