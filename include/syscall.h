@@ -19,6 +19,7 @@
 #define SYS_write 64
 #define SYS_pread 67
 #define SYS_pwrite 68
+#define SYS_stat 78
 #define SYS_fstatat 79
 #define SYS_fstat 80
 #define SYS_exit 93

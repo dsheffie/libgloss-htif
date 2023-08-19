@@ -33,6 +33,7 @@ argv:
 name:
     .asciz "chipyard"
 
-    .bss
+.bss
+.align 3
 __boot_sync:
     .word 0

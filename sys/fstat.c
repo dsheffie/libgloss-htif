@@ -4,6 +4,5 @@
 
 int _fstat(int file, struct stat *st)
 {
-    errno = EBADF;
-    return -1;
+  return SYSCALL2(SYS_fstat, file, (uintptr_t)st);
 }

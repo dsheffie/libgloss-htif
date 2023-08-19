@@ -3,6 +3,5 @@
 
 int _chdir(const char *path)
 {
-    errno = ENOSYS;
-    return -1;
+  return SYSCALL1(SYS_chdir, (uintptr_t)path);
 }

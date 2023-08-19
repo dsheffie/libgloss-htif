@@ -3,6 +3,5 @@
 
 int _close(int file)
 {
-    errno = EBADF;
-    return -1;
+  return (int)SYSCALL1(SYS_close, file);
 }

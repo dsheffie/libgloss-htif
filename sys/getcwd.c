@@ -4,6 +4,5 @@
 
 char *_getcwd(char *buf, size_t size)
 {
-    errno = ENOSYS;
-    return NULL;
+  return (char*)SYSCALL2(SYS_getcwd, (uintptr_t)buf, size);
 }
