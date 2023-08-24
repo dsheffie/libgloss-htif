@@ -4,6 +4,5 @@
 
 int _gettimeofday(struct timeval *tp, void *tzp)
 {
-    errno = ENOSYS;
-    return -1;
+  return SYSCALL2(SYS_gettimeofday, (uintptr_t)tp, (uintptr_t)tzp);
 }
