@@ -4,6 +4,5 @@
 
 int _chown(const char *path, uid_t owner, gid_t group)
 {
-    errno = ENOSYS;
-    return -1;
+  return SYSCALL3(SYS_chown, (uintptr_t)path, owner, group);
 }

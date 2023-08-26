@@ -4,6 +4,5 @@
 
 clock_t _times(struct tms *buf)
 {
-    errno = ENOSYS;
-    return -1;
+  return SYSCALL1(SYS_times, (uintptr_t)buf);
 }
